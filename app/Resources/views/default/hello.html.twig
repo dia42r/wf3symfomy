@@ -1,0 +1,26 @@
+{# empty Twig template #}
+{% extends "base.html.twig" %}
+
+{# ceci est un commentaire     #}
+{% set toto = 'Hello' %}
+
+{% block title %}
+    {{ toto  |upper }}
+{% endblock %}  
+
+{# surcharge le bloc body de base.html.twig  #}
+{% block body %}
+    {{ parent() }}
+    <div class='container'>
+    
+    {# affiche la variable toto  #}
+    {{   toto | upper }}
+    {{   name | upper }}
+    
+    {% if name is not null  %}
+        <p> Vous avez un nom </p>
+    {% endif  %}
+    </div>
+{% endblock %}   
+
+ 

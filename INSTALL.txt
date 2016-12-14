@@ -1,0 +1,8 @@
+ $ composer create-project symfony/framework-standard-edition my_project_name
+
+app/ApppKernel.php  
+add date_default_timezone_set('UTC'); before class declaration 
+
+// Mode dev :
+Dans htaccess remplacer app.php par app_dev.php
+/!\ : Avant de passer en prod ne pas oublier de passer en app.php 
